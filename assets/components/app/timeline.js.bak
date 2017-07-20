@@ -1,0 +1,13 @@
+(function($) {
+	$(window).on('load', function() {
+		var doThisOnClick = function() {
+			var thisButton = $(this);
+			var activeButton = $('.innerB button.active');
+			activeButton.toggleClass('active');
+			thisButton.toggleClass('active');
+		};
+
+
+		$('.innerB button').on('click', doThisOnClick);
+	});
+})(jQuery);
